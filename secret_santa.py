@@ -17,8 +17,11 @@ def main(file="names.txt"):
             if len(lines) == 0: # check if the file is not empty
                 print("The file {} is empty".format(file))
                 return
+            elif len(lines) ==1: # check if the file has more than one name
+                print("The file {} has only one name ".format(file))
+                return
     except:
-        print("Error: the file {} cannot be found or could not be loaded".format(file))
+        print("The file {} cannot be found or could not be loaded".format(file))
         return
 
     # create a list of participants and removing the symbol \n
